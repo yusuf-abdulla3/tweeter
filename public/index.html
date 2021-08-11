@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -44,7 +45,7 @@
       </div>
       <br>
       <div id = "profile-name">
-          <h2><b>Your</b> Name</h2>
+          <h2><b>Yusuf</b> Abdulla</h2>
       </div>
   </header>
 
@@ -53,37 +54,41 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action= "/tweets">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
+          <textarea name="text" id="tweet-text" placeholder = "What are you humming about?"></textarea>
           <div id = "submit-tweet">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+      
+      <!--------------------------------Posted Tweet-------------------------------->
       <section class = "tweet-container">
-        <br>
-        <br>
-        <article style = "border: 5px solid; padding: 10px;">
-          <header>
-            <img src="/images/default-profile-image.png"> 
-            <h3>Newton</h3>
-            <h3>@sir_isaac</h3>
+        <article class = "tweet">
+          <header >
+            <img src="/images/default-profile-image.png" alt="Default Avatar"> 
+            <h2 class = "name">Newton</h3>
+            <h2 class = "username">@Sir_Isaac</h3>
           </header>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur mollitia odio inventore vitae. Inventore amet voluptas libero. Animi officiis sit ad quis. Illo, earum. Illo nam est distinctio quas nulla?</p>
-          <footer style = "border-top: solid 5px;">
-           
-              <date>today</date>
+          <p>
+            I'm baby skateboard dreamcatcher pickled raw denim, slow-carb health goth activated charcoal shoreditch meh portland leggings chicharrones etsy tumeric taiyaki. Pug kale chips banjo, skateboard disrupt tofu kitsch neutra. Gochujang tumblr succulents, wolf chicharrones poutine post-ironic artisan. Fanny pack craft beer af yuccie. Small batch yr cornhole VHS etsy offal flexitarian hashtag umami paleo PBR&B air plant bicycle rights copper mug.
+          </p>
+         
+          <footer>
+              <date>
+                10 days ago
+              </date>
+            
               <div class = "like-retweet-flag-icons">
-              <i class="fas fa-flag"></i>
+              <i class="fas fa-heart"></i>
               <i class="fas fa-retweet"></i>
-              <i class="far fa-heart"></i>
+              <i class="fas fa-flag"></i>
             </div>
-    
           </footer>
+        
         </article>
-
       </section>
+
     </main>
   </body>
 </html>

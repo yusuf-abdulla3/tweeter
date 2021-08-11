@@ -1,3 +1,7 @@
+.new-tweet {
+  position: relative;
+  top: 75px;
+}
 button {
   background-color: #4056A1;
   color: #ffff;
@@ -18,8 +22,9 @@ form {
   top: 30px;
 }
 .new-tweet form #tweet-text {
+  background: transparent;
   border: none;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid;
   position: relative;
   top: 15px;
 }

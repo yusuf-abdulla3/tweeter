@@ -1,0 +1,97 @@
+.tweet-container{
+  position: relative;
+  top: 150px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.tweet:hover {
+  box-shadow: 10px 5px 5px black;
+  opacity: 0.8;
+}
+
+
+
+.tweet-container article {
+  border: 5px solid; 
+  padding: 10px;
+  
+}
+
+.tweet-container > footer {
+  border-top: solid 5px;
+  opacity: 0.5;
+}
+
+.tweet-container img {
+  width : 8%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.tweet-container header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet-container .name{ 
+  position: relative;
+  right: 440px;
+  font-size: 30px;
+}
+
+.tweet-container .username {
+  padding-right: 20px;
+  color: grey;
+  font-size: 30px;
+}
+
+.like-retweet-flag-icons {
+  display: flex;
+  flex-direction: row-reverse;
+  color: black;
+  
+  font-size: 15px;
+  padding-right: 20px;
+  position: relative;
+  top: -15px;
+}
+
+.tweet-container date {
+  position: relative;
+  top: 10px;
+  font-size: 15px;
+  color: black;
+  padding-left: 20px;
+}
+
+.fa-heart {
+  color:navy;
+}
+
+.fa-heart:hover {
+  color:red;
+}
+
+.fa-retweet {
+  color: navy;
+}
+
+.fa-retweet:hover {
+  color: red;
+}
+
+.fa-flag {
+  color: navy;
+}
+
+
+.fa-flag:hover {
+  color: red;
+}
+
+.tweet-container p {
+  padding-left: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+}

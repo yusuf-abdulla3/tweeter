@@ -4,7 +4,6 @@ $("#tweet-text").on("input", function(event) {
   const maxChars = 140;
   const charCount = maxChars - $(this).val().length;
   const counter = $(this).siblings("#submit-tweet").children(".counter");
-  console.log(charCount);
   counter.html(charCount);
   if (charCount > 0) {
     counter.css("color", "black");
