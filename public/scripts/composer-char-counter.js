@@ -3,6 +3,6 @@
 //   console.log("testing testing")
 // })
 
-$(".new-tweet textarea").on("input", "input:text", function(event) {
+$(".new-tweet textarea").on("input", function(event) {
   console.log(this.event);
 });
