@@ -3,23 +3,37 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-$(document).ready(function(event) {
-  const createTweet = function() {
-    const tweet = `
+  
+const tweetObject =  {
+  "user": {
+    "name": "Newton",
+    "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@SirIsaac"
+    },
+  "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+  "created_at": 1461116232227
+}
+
+const createTweet = function(tweet) {
+console.log(tweet);
+const time = timeago.format(1461116232227)
+    const tweetContent = `
     <section class = "tweet-container">
         <article class = "tweet">
           <header >
-            <img src="/images/default-profile-image.png" alt="Default Avatar"> 
-            <h2 class = "name">Newton</h3>
-            <h2 class = "username">@Sir_Isaac</h3>
+            <img src=${tweet.user.avatars} alt="Avatar"> 
+            <h2 class = "name">${tweet.user.name}</h3>
+            <h2 class = "username">${tweet.user.handle}</h3>
           </header>
           <p>
-            I'm baby skateboard dreamcatcher pickled raw denim, slow-carb health goth activated charcoal shoreditch meh portland leggings chicharrones etsy tumeric taiyaki. Pug kale chips banjo, skateboard disrupt tofu kitsch neutra. Gochujang tumblr succulents, wolf chicharrones poutine post-ironic artisan. Fanny pack craft beer af yuccie. Small batch yr cornhole VHS etsy offal flexitarian hashtag umami paleo PBR&B air plant bicycle rights copper mug.
+           ${tweet.content.text}
           </p>
          
           <footer>
               <date>
-                10 days ago
+               ${timeç}
               </date>
             
               <div class = "like-retweet-flag-icons">
@@ -32,11 +46,11 @@ $(document).ready(function(event) {
         </article>
       </section>
       `
-      $('#tweet').append(tweet);
-  }
+      $('#tweetContainer').append(tweetContent);
+  };
+
+  $(document).ready(function(event) {
+    createTweet(tweetObject);
+  });
 
 
-
-
-
-});
