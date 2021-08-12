@@ -4,17 +4,40 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
   
-const tweetObject =  {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
+const data = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
       "handle": "@SirIsaac"
     },
-  "content": {
+    "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-  "created_at": 1461116232227
-}
+    "created_at": 1461116232227
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd" },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088
+  }
+]
+
+const renderTweets = function(tweets) {
+  // loops through tweets
+  $('#tweetContainer').empty();
+  tweets.forEach((tweet) => {
+    const tweetAppend = createTweet(tweet);
+    $('#tweetContainer').append(tweetAppend);
+  })
+
+  }
 
 const createTweet = function(tweet) {
 console.log(tweet);
@@ -33,7 +56,7 @@ const time = timeago.format(1461116232227)
          
           <footer>
               <date>
-               ${timeç}
+               ${time}
               </date>
             
               <div class = "like-retweet-flag-icons">
@@ -49,8 +72,13 @@ const time = timeago.format(1461116232227)
       $('#tweetContainer').append(tweetContent);
   };
 
-  $(document).ready(function(event) {
-    createTweet(tweetObject);
+    // calls createTweetElement for each tweet
+    // takes return value and appends it to the tweets container
+
+  
+    $(document).ready(function(event) {
+      renderTweets(data);
   });
 
+  renderTweets(data);
 
