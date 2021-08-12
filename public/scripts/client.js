@@ -78,7 +78,7 @@
               url: '/tweets',
               data: $(this).serialize(),
               success: function(data) {
-                renderTweets(data)
+                loadTweets();
               }
             });
 
@@ -96,9 +96,8 @@
           });
 
         }
-
         loadTweets();
-
+        
       });
 
 
