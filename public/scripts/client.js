@@ -78,7 +78,11 @@ const time = timeago.format(1461116232227)
   
     $(document).ready(function(event) {
       renderTweets(data);
+      $('#tweet-form').on('submit', function(event) {
+        event.preventDefault();
+        console.log("event has happened");
+      })
   });
 
-  renderTweets(data);
+
 
