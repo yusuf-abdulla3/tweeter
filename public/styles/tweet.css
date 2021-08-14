@@ -26,35 +26,43 @@
 
 .tweet-container img {
 position: relative;
-top: 1em;
+top: 5px;
 padding: 0px 10px;
+flex-shrink: 0;
+
 }
 
 .tweet-container header {
   display: flex;
-  flex-shrink: 0;
+  flex-direction: row;
+  margin: 1em;
+  justify-content: space-between;
+
+ 
+}
+
+.tweet-container span {
+  display: flex;
   flex-direction: row;
 }
 
 .tweet-container .name{ 
-  padding-right: 34em;
-  float: left;
+ 
   font-size: 1.2em;
-  margin: 5px;
+  margin: 0.5em;
   position:relative;
   top: 1em;
-  overflow: hidden;
+  
 }
 
 .tweet-container .username {
   
   color: grey;
   font-size: 1.2em;
- position: absolute;
- left: 13em;
-  margin-right: 1em;
-  overflow: hidden;
-  float: right;
+  position: relative;
+  
+  margin-right: 0.5em;
+
 }
 
 .like-retweet-flag-icons {
@@ -122,9 +130,11 @@ padding: 0px 10px;
     display: flex;
     width: 50%;
     height: auto;
-    position: absolute;
-    left: 700px;
-    top: -300px;
+    position: relative;
+    left: 500px;
+    top: -720px;
+    flex-shrink: 0;
+    margin: auto;
     
 
   }
@@ -137,7 +147,8 @@ padding: 0px 10px;
     position: relative;
     top: 240px;
     left: 60px;
-    border-radius: 50%;
+    border-radius: 5%;
+
 
 
   }
