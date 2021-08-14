@@ -4,6 +4,9 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+ 
+
+
 .tweet:hover {
   box-shadow: 10px 5px 5px black;
   opacity: 0.8;
@@ -13,7 +16,6 @@
 
 .tweet-container article {
   border: 5px solid; 
-  padding: 10px;
   
 }
 
@@ -23,27 +25,36 @@
 }
 
 .tweet-container img {
-  width : 8%;
-  height: auto;
-  border-radius: 50%;
+position: relative;
+top: 1em;
+padding: 0px 10px;
 }
 
 .tweet-container header {
   display: flex;
+  flex-shrink: 0;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .tweet-container .name{ 
-  position: relative;
-  right: 440px;
-  font-size: 30px;
+  padding-right: 34em;
+  float: left;
+  font-size: 1.2em;
+  margin: 5px;
+  position:relative;
+  top: 1em;
+  overflow: hidden;
 }
 
 .tweet-container .username {
-  padding-right: 20px;
+  
   color: grey;
-  font-size: 30px;
+  font-size: 1.2em;
+ position: absolute;
+ left: 13em;
+  margin-right: 1em;
+  overflow: hidden;
+  float: right;
 }
 
 .like-retweet-flag-icons {
@@ -91,7 +102,44 @@
 }
 
 .tweet-container p {
-  padding-left: 20px;
+  padding: 0px 20px;
   font-family: 'Source Sans Pro', sans-serif;
-  font-style: normal;
+  position: relative;
+  top: 1em;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  flex-grow: 1;
+
 }
+
+@media screen and (min-width: 1024px){
+  body {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .container {
+    display: flex;
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: 700px;
+    top: -300px;
+    
+
+  }
+  .header-below-nav {
+    display: flex;
+    width: 40%;
+    height: auto;
+    flex-shrink: 1;
+    margin: 20px;
+    position: relative;
+    top: 240px;
+    left: 60px;
+    border-radius: 50%;
+
+
+  }
+}
+
